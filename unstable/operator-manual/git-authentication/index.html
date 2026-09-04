@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/icon/burrito.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -1983,8 +1983,8 @@ Authentication is required for:</p>
 <span class="nt">stringData</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github</span>
 <span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/padok-team/burrito-examples</span>
-<span class="w">  </span><span class="nt">githubToken</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;github_pat_xxx&quot;</span>
-<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-webhook-secret&quot;</span>
+<span class="w">  </span><span class="nt">githubToken</span><span class="p">:</span><span class="w"> </span><span class="s">"github_pat_xxx"</span>
+<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">"my-webhook-secret"</span>
 </code></pre></div>
 <h3 id="shared-credentials">Shared Credentials<a class="headerlink" href="#shared-credentials" title="Permanent link">&para;</a></h3>
 <p>Shared credentials can be used across multiple repositories and optionally restricted to specific namespaces. These secrets use the type <code>credentials.burrito.tf/shared</code>.</p>
@@ -1996,13 +1996,13 @@ Authentication is required for:</p>
 <span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github-shared-credentials</span>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">burrito-system</span>
 <span class="w">  </span><span class="nt">annotations</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">burrito.tf/allowed-tenants</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;team-a,team-b&quot;</span>
+<span class="w">    </span><span class="nt">burrito.tf/allowed-tenants</span><span class="p">:</span><span class="w"> </span><span class="s">"team-a,team-b"</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">credentials.burrito.tf/shared</span>
 <span class="nt">stringData</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github</span>
 <span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.com</span>
-<span class="w">  </span><span class="nt">githubToken</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;github_pat_xxx&quot;</span>
-<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-webhook-secret&quot;</span>
+<span class="w">  </span><span class="nt">githubToken</span><span class="p">:</span><span class="w"> </span><span class="s">"github_pat_xxx"</span>
+<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">"my-webhook-secret"</span>
 </code></pre></div>
 <h3 id="credentials-fields">Credentials Fields<a class="headerlink" href="#credentials-fields" title="Permanent link">&para;</a></h3>
 <p>The following fields are available in credential secrets:</p>
@@ -2062,8 +2062,8 @@ Authentication is required for:</p>
 <span class="nt">stringData</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standard</span>
 <span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://git.example.com/my-org/my-repo</span>
-<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-username&quot;</span>
-<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-password&quot;</span>
+<span class="w">  </span><span class="nt">username</span><span class="p">:</span><span class="w"> </span><span class="s">"my-username"</span>
+<span class="w">  </span><span class="nt">password</span><span class="p">:</span><span class="w"> </span><span class="s">"my-password"</span>
 </code></pre></div>
 <h4 id="repository-specific-credential-using-ssh-private-key">Repository-specific credential using SSH private key<a class="headerlink" href="#repository-specific-credential-using-ssh-private-key" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
@@ -2079,7 +2079,7 @@ Authentication is required for:</p>
 <span class="w">    </span><span class="no">-----BEGIN OPENSSH PRIVATE KEY-----</span>
 <span class="w">    </span><span class="no">my-private-key</span>
 <span class="w">    </span><span class="no">-----END OPENSSH PRIVATE KEY-----</span>
-<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-webhook-secret&quot;</span>
+<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">"my-webhook-secret"</span>
 </code></pre></div>
 <h4 id="repository-specific-credential-for-github-using-personal-access-token">Repository-specific credential for GitHub using Personal Access Token<a class="headerlink" href="#repository-specific-credential-for-github-using-personal-access-token" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
@@ -2091,8 +2091,8 @@ Authentication is required for:</p>
 <span class="nt">stringData</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github</span>
 <span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/my-org/my-repo</span>
-<span class="w">  </span><span class="nt">githubToken</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;github_pat_xxx&quot;</span>
-<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-webhook-secret&quot;</span>
+<span class="w">  </span><span class="nt">githubToken</span><span class="p">:</span><span class="w"> </span><span class="s">"github_pat_xxx"</span>
+<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">"my-webhook-secret"</span>
 </code></pre></div>
 <h4 id="repository-specific-credential-for-github-using-github-app">Repository-specific credential for GitHub using GitHub App<a class="headerlink" href="#repository-specific-credential-for-github-using-github-app" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
@@ -2104,13 +2104,13 @@ Authentication is required for:</p>
 <span class="nt">stringData</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github</span>
 <span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/my-org/my-repo</span>
-<span class="w">  </span><span class="nt">githubAppID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;123456&quot;</span>
-<span class="w">  </span><span class="nt">githubAppInstallationID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;12345678&quot;</span>
+<span class="w">  </span><span class="nt">githubAppID</span><span class="p">:</span><span class="w"> </span><span class="s">"123456"</span>
+<span class="w">  </span><span class="nt">githubAppInstallationID</span><span class="p">:</span><span class="w"> </span><span class="s">"12345678"</span>
 <span class="w">  </span><span class="nt">githubAppPrivateKey</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">    </span><span class="no">-----BEGIN RSA PRIVATE KEY-----</span>
 <span class="w">    </span><span class="no">my-private-key</span>
 <span class="w">    </span><span class="no">-----END RSA PRIVATE KEY-----</span>
-<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-webhook-secret&quot;</span>
+<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">"my-webhook-secret"</span>
 </code></pre></div>
 <h4 id="shared-credential-for-all-repositories-on-gitlabexamplecom">Shared credential for all repositories on gitlab.example.com<a class="headerlink" href="#shared-credential-for-all-repositories-on-gitlabexamplecom" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
@@ -2123,8 +2123,8 @@ Authentication is required for:</p>
 <span class="nt">stringData</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gitlab</span>
 <span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://gitlab.example.com</span>
-<span class="w">  </span><span class="nt">gitlabToken</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;glpat-xxxx&quot;</span>
-<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-webhook-secret&quot;</span>
+<span class="w">  </span><span class="nt">gitlabToken</span><span class="p">:</span><span class="w"> </span><span class="s">"glpat-xxxx"</span>
+<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">"my-webhook-secret"</span>
 </code></pre></div>
 <h4 id="shared-credential-for-all-repos-in-an-organization-repositories-with-namespace-restrictions">Shared credential for all repos in an organization repositories with namespace restrictions<a class="headerlink" href="#shared-credential-for-all-repos-in-an-organization-repositories-with-namespace-restrictions" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
@@ -2134,18 +2134,18 @@ Authentication is required for:</p>
 <span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">burrito-system</span>
 <span class="w">  </span><span class="nt">annotations</span><span class="p">:</span>
 <span class="w">    </span><span class="c1"># 👇 only repositories with those 3 tenants can use these credentials</span>
-<span class="w">    </span><span class="nt">burrito.tf/allowed-tenants</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;team-a,team-b,team-c&quot;</span>
+<span class="w">    </span><span class="nt">burrito.tf/allowed-tenants</span><span class="p">:</span><span class="w"> </span><span class="s">"team-a,team-b,team-c"</span>
 <span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">credentials.burrito.tf/shared</span>
 <span class="nt">stringData</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">provider</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github</span>
 <span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://github.com/my-org</span>
-<span class="w">  </span><span class="nt">githubAppID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;123456&quot;</span>
-<span class="w">  </span><span class="nt">githubAppInstallationID</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;12345678&quot;</span>
+<span class="w">  </span><span class="nt">githubAppID</span><span class="p">:</span><span class="w"> </span><span class="s">"123456"</span>
+<span class="w">  </span><span class="nt">githubAppInstallationID</span><span class="p">:</span><span class="w"> </span><span class="s">"12345678"</span>
 <span class="w">  </span><span class="nt">githubAppPrivateKey</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">    </span><span class="no">-----BEGIN RSA PRIVATE KEY-----</span>
 <span class="w">    </span><span class="no">my-private-key</span>
 <span class="w">    </span><span class="no">-----END RSA PRIVATE KEY-----</span>
-<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;my-webhook-secret&quot;</span>
+<span class="w">  </span><span class="nt">webhookSecret</span><span class="p">:</span><span class="w"> </span><span class="s">"my-webhook-secret"</span>
 </code></pre></div>
 
 
@@ -2199,7 +2199,7 @@ Authentication is required for:</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

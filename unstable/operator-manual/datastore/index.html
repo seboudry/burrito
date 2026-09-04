@@ -19,7 +19,7 @@
       
       
       <link rel="icon" href="../../assets/icon/burrito.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -27,7 +27,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -1974,10 +1974,10 @@
 <span class="nv">IV_HEX</span><span class="o">=</span><span class="k">$(</span>xxd<span class="w"> </span>-l<span class="w"> </span><span class="m">16</span><span class="w"> </span>-p<span class="w"> </span>plan.json<span class="k">)</span>
 
 <span class="c1"># derivate your key with sha256</span>
-<span class="nv">KEY_HASH</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">&quot;your-encryption-key&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sha256sum<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s1">&#39; &#39;</span><span class="w"> </span>-f1<span class="k">)</span>
+<span class="nv">KEY_HASH</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span>-n<span class="w"> </span><span class="s2">"your-encryption-key"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sha256sum<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-d<span class="s1">' '</span><span class="w"> </span>-f1<span class="k">)</span>
 
 <span class="c1"># decrypt the file</span>
-openssl<span class="w"> </span>enc<span class="w"> </span>-aes-256-cbc<span class="w"> </span>-d<span class="w"> </span>-in<span class="w"> </span>plan.json<span class="w"> </span>-K<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">KEY_HASH</span><span class="si">}</span><span class="s2">&quot;</span><span class="w"> </span>-iv<span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">IV_HEX</span><span class="si">}</span><span class="s2">&quot;</span>
+openssl<span class="w"> </span>enc<span class="w"> </span>-aes-256-cbc<span class="w"> </span>-d<span class="w"> </span>-in<span class="w"> </span>plan.json<span class="w"> </span>-K<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">KEY_HASH</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span>-iv<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">IV_HEX</span><span class="si">}</span><span class="s2">"</span>
 </code></pre></div>
 <h3 id="encrypting-existing-files">Encrypting existing files<a class="headerlink" href="#encrypting-existing-files" title="Permanent link">&para;</a></h3>
 <p>If you enable encryption on an existing datastore with unencrypted files, you can use the <code>/encrypt</code> endpoint to encrypt all existing files. See the <a href="../encrypt-endpoint/">Encrypt Endpoint documentation</a> for detailed usage instructions.</p>
@@ -2070,7 +2070,7 @@ openssl<span class="w"> </span>enc<span class="w"> </span>-aes-256-cbc<span clas
       <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.indexes"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

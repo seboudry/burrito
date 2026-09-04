@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/icon/burrito.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -25,7 +25,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
       
 
@@ -2300,26 +2300,26 @@ my-layer-apply-gxjhd   0/1     Completed   0          2m36s
 <div class="highlight"><pre><span></span><code><span class="c1"># config:</span>
 <span class="c1">#   burrito:</span>
 <span class="c1">#     runner:</span>
-<span class="c1">#       command: [&quot;/usr/local/bin/dlv&quot;]</span>
-<span class="c1">#       args: [&quot;--listen=0.0.0.0:2346&quot;, &quot;--headless=true&quot;, &quot;--accept-multiclient&quot;, &quot;--api-version=2&quot;, &quot;--log&quot;, &quot;exec&quot;, &quot;/usr/local/bin/burrito&quot;, &quot;runner&quot;, &quot;start&quot;]</span>
+<span class="c1">#       command: ["/usr/local/bin/dlv"]</span>
+<span class="c1">#       args: ["--listen=0.0.0.0:2346", "--headless=true", "--accept-multiclient", "--api-version=2", "--log", "exec", "/usr/local/bin/burrito", "runner", "start"]</span>
 
 <span class="c1"># controllers:</span>
 <span class="c1">#   deployment:</span>
 <span class="c1">#     mode: Debug</span>
-<span class="c1">#     command: [&quot;/usr/local/bin/dlv&quot;]</span>
-<span class="c1">#     args: [&quot;--listen=0.0.0.0:2345&quot;, &quot;--headless=true&quot;, &quot;--accept-multiclient&quot;, &quot;--api-version=2&quot;, &quot;--log&quot;, &quot;exec&quot;, &quot;/usr/local/bin/burrito&quot;, &quot;controllers&quot;, &quot;start&quot;]</span>
+<span class="c1">#     command: ["/usr/local/bin/dlv"]</span>
+<span class="c1">#     args: ["--listen=0.0.0.0:2345", "--headless=true", "--accept-multiclient", "--api-version=2", "--log", "exec", "/usr/local/bin/burrito", "controllers", "start"]</span>
 
 <span class="c1"># datastore:</span>
 <span class="c1">#   deployment:</span>
 <span class="c1">#     mode: Debug</span>
-<span class="c1">#     command: [&quot;/usr/local/bin/dlv&quot;]</span>
-<span class="c1">#     args: [&quot;--listen=0.0.0.0:2347&quot;, &quot;--headless=true&quot;, &quot;--accept-multiclient&quot;, &quot;--api-version=2&quot;, &quot;--log&quot;, &quot;exec&quot;, &quot;/usr/local/bin/burrito&quot;, &quot;datastore&quot;, &quot;start&quot;]</span>
+<span class="c1">#     command: ["/usr/local/bin/dlv"]</span>
+<span class="c1">#     args: ["--listen=0.0.0.0:2347", "--headless=true", "--accept-multiclient", "--api-version=2", "--log", "exec", "/usr/local/bin/burrito", "datastore", "start"]</span>
 
 <span class="c1"># server:</span>
 <span class="c1">#   deployment:</span>
 <span class="c1">#     mode: Debug</span>
-<span class="c1">#     command: [&quot;/usr/local/bin/dlv&quot;]</span>
-<span class="c1">#     args: [&quot;--listen=0.0.0.0:2348&quot;, &quot;--headless=true&quot;, &quot;--accept-multiclient&quot;, &quot;--api-version=2&quot;, &quot;--log&quot;, &quot;exec&quot;, &quot;/usr/local/bin/burrito&quot;, &quot;server&quot;, &quot;start&quot;]</span>
+<span class="c1">#     command: ["/usr/local/bin/dlv"]</span>
+<span class="c1">#     args: ["--listen=0.0.0.0:2348", "--headless=true", "--accept-multiclient", "--api-version=2", "--log", "exec", "/usr/local/bin/burrito", "server", "start"]</span>
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -2345,7 +2345,7 @@ my-layer-apply-gxjhd   0/1     Completed   0          2m36s
 <ul>
 <li>For the controller:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>port-forward<span class="w"> </span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>burrito-system<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;/burrito-controllers.*Running/{print $1}&#39;</span><span class="k">)</span><span class="w"> </span>-n<span class="w"> </span>burrito-system<span class="w"> </span><span class="m">2345</span>:2345
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>port-forward<span class="w"> </span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>burrito-system<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">'/burrito-controllers.*Running/{print $1}'</span><span class="k">)</span><span class="w"> </span>-n<span class="w"> </span>burrito-system<span class="w"> </span><span class="m">2345</span>:2345
 </code></pre></div>
 <ul>
 <li>For the runner:</li>
@@ -2356,12 +2356,12 @@ my-layer-apply-gxjhd   0/1     Completed   0          2m36s
 <ul>
 <li>For the datastore:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>port-forward<span class="w"> </span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>burrito-system<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;/burrito-datastore.*Running/{print $1}&#39;</span><span class="k">)</span><span class="w"> </span>-n<span class="w"> </span>burrito-system<span class="w"> </span><span class="m">2347</span>:2347
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>port-forward<span class="w"> </span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>burrito-system<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">'/burrito-datastore.*Running/{print $1}'</span><span class="k">)</span><span class="w"> </span>-n<span class="w"> </span>burrito-system<span class="w"> </span><span class="m">2347</span>:2347
 </code></pre></div>
 <ul>
 <li>For the server:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>port-forward<span class="w"> </span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>burrito-system<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;/burrito-server.*Running/{print $1}&#39;</span><span class="k">)</span><span class="w"> </span>-n<span class="w"> </span>burrito-system<span class="w"> </span><span class="m">2348</span>:2348
+<div class="highlight"><pre><span></span><code>kubectl<span class="w"> </span>port-forward<span class="w"> </span><span class="k">$(</span>kubectl<span class="w"> </span>get<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>burrito-system<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">'/burrito-server.*Running/{print $1}'</span><span class="k">)</span><span class="w"> </span>-n<span class="w"> </span>burrito-system<span class="w"> </span><span class="m">2348</span>:2348
 </code></pre></div>
 <h3 id="start-debugging">Start debugging<a class="headerlink" href="#start-debugging" title="Permanent link">&para;</a></h3>
 <h4 id="with-vscode">With vscode<a class="headerlink" href="#with-vscode" title="Permanent link">&para;</a></h4>
@@ -2371,43 +2371,43 @@ my-layer-apply-gxjhd   0/1     Completed   0          2m36s
 </div>
 <p>If you want to use Vscode to debug the app, you'll need to get the <a href="https://marketplace.visualstudio.com/items?itemName=golang.go">Go extension</a> and create a <code>.vscode/launch.json</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-<span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2.0"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"configurations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Attach to Controller&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;go&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attach&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;remote&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2345</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Attach to Controller"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"go"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"request"</span><span class="p">:</span><span class="w"> </span><span class="s2">"attach"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"remote"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">2345</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"apiVersion"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Attach to Runner&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;go&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attach&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;remote&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2346</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Attach to Runner"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"go"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"request"</span><span class="p">:</span><span class="w"> </span><span class="s2">"attach"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"remote"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">2346</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"apiVersion"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Attach to Datastore&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;go&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attach&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;remote&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2347</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Attach to Datastore"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"go"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"request"</span><span class="p">:</span><span class="w"> </span><span class="s2">"attach"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"remote"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">2347</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"apiVersion"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
 <span class="w">        </span><span class="p">},</span>
 <span class="w">        </span><span class="p">{</span>
-<span class="w">            </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Attach to Server&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;go&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attach&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;remote&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2348</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;127.0.0.1&quot;</span><span class="p">,</span>
-<span class="w">            </span><span class="nt">&quot;apiVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">            </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Attach to Server"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"go"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"request"</span><span class="p">:</span><span class="w"> </span><span class="s2">"attach"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"remote"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"port"</span><span class="p">:</span><span class="w"> </span><span class="mi">2348</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"host"</span><span class="p">:</span><span class="w"> </span><span class="s2">"127.0.0.1"</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">"apiVersion"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span>
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">]</span>
 <span class="p">}</span>
@@ -2476,7 +2476,7 @@ my-layer-apply-gxjhd   0/1     Completed   0          2m36s
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.indexes"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
